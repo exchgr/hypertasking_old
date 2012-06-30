@@ -1,0 +1,9 @@
+!!!
+%html
+  %head
+    %title Hypertasking
+    = stylesheet_link_tag 'application', media: 'all'
+    = stylesheet_link_tag controller.controller_name, media: 'all'
+    = javascript_include_tag 'application'
+    = javascript_include_tag controller.controller_name
+  %body= yield
