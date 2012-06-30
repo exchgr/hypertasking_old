@@ -1,0 +1,17 @@
+# Hypertasking
+
+Are you fed up with the state of to-do list apps? Are you tired of super simple to-do lists that promise to quicken your workflow, only to have you screaming at their severe lack of features? Are you tired of to-do lists that give you way too much control, to the point where they're so fiddly that you spend all day rearranging your tasks and getting nothing done?
+
+Fear not. Hypertasking is coming. Hypertasking aims to solve all these problems by providing a beautiful, usable interface for making todo lists _your_ way. Planned features include:
+
++ Multiple lists
++ Indentation and collapsibility
++ Due dates
++ Custom reordering, or sorting by other criteria
++ Location and time-based reminders
++ Priorities
++ Style, ease, quality, [velocity, design, comfort](http://en.wikipedia.org/wiki/Velocity\_:\_Design\_:\_Comfort)
+
+Hypertasking aims to be the best to-do list app out there. Not the simplest, not the quickest, and not the most fully-featured hunk of junk. Just the best. It'll begin life as a simple Rails app, and eventually (when I learn ObjC), it'll become a Mac app and an iOS app, providing offline and syncing capabilities to make it super useful no matter where you are. 
+
+So if you want a to-do list app that provides a truly productive experience, stick around for further updates.
