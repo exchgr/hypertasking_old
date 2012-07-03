@@ -1,0 +1,65 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+
+@import 'bootstrap';
+@import 'bootstrap-responsive';
+
+$white: #fff;
+$black: #333;
+
+body {
+    & > .container-fluid, & > .container {
+        margin-top: 60px;
+        // FIX ME: when responsive, huge gap on small widths
+    }
+}
+
+header {
+    .navbar-inner {
+        background: $grayLight;
+    }
+
+    #logo {
+        &, &:hover {
+            color: $black;
+            text-shadow: 0px 1px 0px darken($grayLighter, 10%);
+            text-decoration: none;
+        }
+    }
+}
+
+.hero-unit {
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        margin: 20px 0px 10px 0px;
+    }
+}
+
+footer {
+    border-top: 1px $grayLight solid;
+    padding-top: 5px;
+
+    nav {
+        float: right;
+
+        ul {
+            li {
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
+    }
+}
