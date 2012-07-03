@@ -1,6 +1,16 @@
 .hero-unit
-  %h1 More about Hypertasking
+  %h1
+    More about
+    %span.logo Hypertasking
   %p Hypertasking aims to be the best to-do list app out there. Not the simplest, not the quickest, and not the most fully-featured hunk of junk. Just the best. It'll begin life as a simple Rails app, and eventually (when I learn ObjC), it'll become a Mac app and an iOS app, providing offline and syncing capabilities to make it super useful no matter where you are. So if you want a to-do list app that provides a truly productive experience, stick around for further updates.
+  %h2 What is hypertasking?
+  %p Good question. Hypertasking, to me, is a state of mind and body that is super-productive. When I set out to make this app, I wanted to make something that would easily allow people to get into that high-throughput mode without worrying too much about the limitations or capabilities of the system they're using.
+  %h2
+    Have you read
+    = succeed '?' do
+      %i Getting Things Done
+  %p
+    Nope. But I plan to.
   %h2 Planned Features
   %ul
     %li
@@ -15,6 +25,8 @@
       %p Location- and time-based reminders
     %li
       %p Priorities
+    %li
+      %p Unique special sauce
     %li
       %p Offline and sync
     %li

@@ -27,15 +27,20 @@ body {
 header {
     .navbar-inner {
         background: $grayLight;
+        box-shadow: inset 0px -3px 3px lighten($gray, 20%);
     }
 
-    #logo {
+    .logo {
         &, &:hover {
-            color: $black;
-            text-shadow: 0px 1px 0px darken($grayLighter, 10%);
+            color: $white;
+            text-shadow: 0px 1px 2px $gray;
             text-decoration: none;
         }
     }
+}
+
+.logo {
+    font-family: 'Yesteryear';
 }
 
 .hero-unit {

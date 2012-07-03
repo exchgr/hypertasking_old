@@ -2,6 +2,7 @@
 %html
   %head
     %title Hypertasking
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Yesteryear', media: 'all'
     = stylesheet_link_tag 'application', media: 'all'
     = stylesheet_link_tag controller.controller_name, media: 'all'
     = javascript_include_tag 'application'
@@ -10,7 +11,7 @@
     %header.navbar.navbar-fixed-top
       .navbar-inner
         .container
-          %h1= link_to 'Hypertasking', root_path, id: 'logo', alt: 'Home'
+          %h1= link_to 'Hypertasking', root_path, class: 'logo', alt: 'Home'
     - if params[:controller] == 'static_pages'
       .container
         = yield
