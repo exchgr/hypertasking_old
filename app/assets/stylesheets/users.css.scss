@@ -4,7 +4,7 @@
 
 /* Mixins */
 
-@mixin box-sizing {
+@mixin box-sizing { // Move me to my own mixins file!
     -o-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -12,7 +12,7 @@
 }
 
 form {
-    margin-top: 15px;
+    margin: 15px 0px 30px 0px;
 
     input, textarea, select, .uneditable-input {
         width: 100%;
