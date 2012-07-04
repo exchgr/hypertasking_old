@@ -14,9 +14,13 @@
           %h1= link_to 'Hypertasking', root_path, class: 'logo', alt: 'Home'
     - if params[:controller] == 'static_pages'
       .container
+        - flash.each do |key, value|
+          %aside.alert{class: "alert-#{key}"}= value
         = yield
         = render 'layouts/footer'
     - else
       .container-fluid
+        - flash.each do |key, value|
+          %aside.alert{class: "alert-#{key}"}= value
         = yield
         = render 'layouts/footer'
