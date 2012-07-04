@@ -21,5 +21,5 @@ class User < ActiveRecord::Base
     length: {minimum: 6}
 
   validates :password_confirmation,
-    presence: true,
+    presence: true
 end

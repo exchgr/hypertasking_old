@@ -1,5 +1,6 @@
 Hypertasking::Application.routes.draw do
   get "users/new"
+  match '/signup', to: 'users#new'
 
   #Static pages
   root to: 'static_pages#home'
