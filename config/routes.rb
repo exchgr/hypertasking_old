@@ -1,4 +1,6 @@
 Hypertasking::Application.routes.draw do
+  get "users/new"
+
   #Static pages
   root to: 'static_pages#home'
   match '/about', to: 'static_pages#about'
