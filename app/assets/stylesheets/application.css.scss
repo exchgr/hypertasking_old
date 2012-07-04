@@ -19,15 +19,6 @@
 $white: #fff;
 $black: #333;
 
-/* Mixins */
-
-@mixin box-sizing {
-    -o-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
 body {
     & > .container-fluid, & > .container {
         margin-top: 60px;
@@ -47,6 +38,14 @@ header {
             text-decoration: none;
         }
     }
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
 }
 
 .logo {

@@ -1,2 +1,10 @@
-%h1 Users#new
-%p Find me in app/views/users/new.html.haml
+- provide :title, 'Sign up'
+.row
+  .span4.offset4
+    %h1 Sign up
+    = form_for @user do |f|
+      = f.text_field :name, placeholder: 'Name'
+      = f.text_field :email, placeholder: 'Email'
+      = f.password_field :password, placeholder: 'Password'
+      = f.password_field :password_confirmation, placeholder: 'Type it again.'
+      .right= f.submit 'Go go go!', class: 'btn btn-primary btn-large'
