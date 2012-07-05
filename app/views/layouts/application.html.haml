@@ -5,10 +5,10 @@
       Hypertasking |
       = yield :title
     = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Yesteryear', media: 'all'
-    = stylesheet_link_tag 'application', media: 'all'
-    = stylesheet_link_tag controller.controller_name, media: 'all'
-    = javascript_include_tag 'application'
-    = javascript_include_tag controller.controller_name
+    = stylesheet_link_tag 'application', controller.controller_name, media: 'all'
+    = javascript_include_tag 'application', controller.controller_name
+    %meta{name: 'viewport', content: 'user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0'}/
+    = csrf_meta_tags
   %body
     %header.navbar.navbar-fixed-top
       .navbar-inner

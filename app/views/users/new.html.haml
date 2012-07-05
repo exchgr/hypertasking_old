@@ -4,7 +4,7 @@
     %h1 Sign up
     = form_for @user do |f|
       = f.text_field :name, placeholder: "What's your name?"
-      = f.text_field :email, placeholder: "What's your email?"
+      = f.email_field :email, placeholder: "What's your email?"
       = f.password_field :password, placeholder: 'Choose a password.'
       = f.password_field :password_confirmation, placeholder: 'Type it again.'
       .right= f.submit 'Go go go!', class: 'btn btn-primary btn-large'
