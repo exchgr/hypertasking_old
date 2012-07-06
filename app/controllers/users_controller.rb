@@ -5,10 +5,10 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new params[:user]
-    if @user.save
-      #what to do?
-    else
-      render 'new'
+    @user.save
+
+    respond_to do |format|
+      format.js
     end
   end
 

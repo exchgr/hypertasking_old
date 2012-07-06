@@ -1,0 +1,27 @@
+<% if @user.errors.any? %>
+  var errors = {ids: [], messages: []};
+
+  $('.control-group')
+  .removeClass('error')
+  .find('.help-inline')
+  .html('')
+  .fadeOut();
+
+  <% @user.errors.each do |error| %>
+    errors.ids.push("#<%= error %>");
+  <% end %>
+
+  <% @user.errors.full_messages.each do |message| %>
+    errors.messages.push("<%= message %>");
+  <% end %>
+
+  $.each(errors.ids, function(i, value) {
+    $('.control-group' + errors.ids[i])
+    .addClass('error')
+    .find('.help-inline')
+    .html(errors.messages[i])
+    .fadeIn();
+  });
+<% else %>
+  window.location.replace("/users/<%= @user.id %>");
+<% end %>

@@ -1,2 +1,3 @@
-- provide :title, @user.name
-%h1= @user.name
+- provide :title, @user.first_name + ' ' + @user.last_name + '\'s tasks'
+%h1= @user.first_name + ' ' + @user.last_name + '\'s tasks'
+// Add 'Your' logic
