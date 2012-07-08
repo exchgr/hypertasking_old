@@ -24,6 +24,11 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = User.new
+    if signed_in?
+      flash[:info] = "You're already signed in!"
+      redirect_to current_user
+    else
+      @user = User.new
+    end
   end
 end
