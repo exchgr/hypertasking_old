@@ -26,6 +26,10 @@ body {
 }
 
 header {
+    h1 {
+        display: inline-block;
+    }
+
     .logo {
         &, &:hover {
             color: $white;
