@@ -12,6 +12,7 @@ class SessionsController < ApplicationController
       if user
         if user.authenticate params[:session][:password]
           sign_in user
+          flash[:success] = 'Welcome to Hypertasking!'
           format.js
         else
           format.js {
