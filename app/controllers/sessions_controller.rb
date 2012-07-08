@@ -7,7 +7,8 @@ class SessionsController < ApplicationController
     respond_to do |format|
       if user
         if user.authenticate params[:session][:password]
-          # Sign in and do all the right things.
+          sign_in user
+          format.js
         else
           format.js {
             render template: 'shared/ujs/form_errors.js.erb',
