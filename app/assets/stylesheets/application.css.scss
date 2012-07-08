@@ -75,13 +75,15 @@ footer {
     }
 }
 
-@media (max-width: 979px) {
+@media (max-width: 979px) { // below landscape tablet
     body {
         & > .container-fluid, & > .container {
             margin-top: 0px;
         }
     }
+}
 
+@media (max-width: 767px) { // below portrait tablet
     .hero-unit {
         padding: 20px;
         
