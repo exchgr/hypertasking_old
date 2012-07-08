@@ -1,12 +1,15 @@
 Hypertasking::Application.routes.draw do
   # Resources
   resources :users
+  resources :sessions, only: [:create, :destroy, :new]
 
   # Static pages
   root to: 'static_pages#home'
   match '/about', to: 'static_pages#about'
 
   match '/signup', to: 'users#new'
+  match '/signin', to: 'sessions#new'
+  match '/signout', to: 'session#destroy', via: :delete
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
