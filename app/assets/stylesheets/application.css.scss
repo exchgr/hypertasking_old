@@ -47,6 +47,12 @@ header {
     text-align: right;
 }
 
+span.right {
+    text-align: left;
+    position: absolute;
+    right: 0px;
+}
+
 .logo {
     font-weight: bold;
     font-family: 'Yesteryear';
