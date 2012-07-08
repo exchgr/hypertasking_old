@@ -8,7 +8,17 @@ class UsersController < ApplicationController
     @user.save
 
     respond_to do |format|
-      format.js
+      if @user.save
+        format.js
+      else
+        format.js {
+          render template: 'shared/ujs/form_errors.js.erb',
+          locals: {
+            ids: @user.errors,
+            full_messages: @user.errors.full_messages 
+          }
+        }
+      end
     end
   end
 

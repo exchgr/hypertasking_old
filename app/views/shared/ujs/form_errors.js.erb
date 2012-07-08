@@ -1,0 +1,28 @@
+var errors = {ids: [], full_messages: []};
+
+<% ids.each do |error| %>
+  errors.ids.push("#<%= error %>");
+<% end %>
+
+<% full_messages.each do |message| %>
+  errors.full_messages.push("<%= message %>");
+<% end %>
+
+$.each(errors.ids, function(i, value) {
+  if (errors.ids[i] == errors.ids[i-1]) {
+    return true;
+  }
+
+  $('.control-group' + errors.ids[i])
+  .addClass('error')
+  .find('.help-inline')
+  .fadeOut(function() {
+    $(this).html(errors.full_messages[i])
+    .fadeIn();
+  });
+});
+
+$('.control-group:not(' + errors.ids.join() + ')')
+.removeClass('error')
+.find('.help-inline')
+.fadeOut();
