@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        sign_in @user
         format.js
       else
         format.js {
