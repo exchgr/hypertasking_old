@@ -25,10 +25,6 @@ body {
     }
 }
 
-body, html {
-    height: 100%;
-}
-
 header {
     .logo {
         &, &:hover {
@@ -49,8 +45,7 @@ header {
 
 span.right {
     text-align: left;
-    position: absolute;
-    right: 0px;
+    float: right;
 }
 
 .logo {
@@ -69,8 +64,10 @@ span.right {
 }
 
 footer {
+    clear: both;
     border-top: 1px $grayLight solid;
     padding-top: 5px;
+    margin-top: 30px;
 
     nav {
         float: right;
