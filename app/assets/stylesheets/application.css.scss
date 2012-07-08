@@ -35,6 +35,15 @@ header {
     }
 }
 
+h2 {
+    margin-top: 20px;
+    line-height: 1.2;
+}
+
+p {
+    margin: 9px 0px 0px 0px;
+}
+
 .center {
     text-align: center;
 }
@@ -43,24 +52,9 @@ header {
     text-align: right;
 }
 
-span.right {
-    text-align: left;
-    float: right;
-}
-
 .logo {
     font-weight: normal;
     font-family: 'Yesteryear';
-}
-
-.hero-unit {
-    h1 {
-        margin-bottom: 10px;
-    }
-
-    h2 {
-        margin: 20px 0px 10px 0px;
-    }
 }
 
 footer {
@@ -86,5 +80,27 @@ footer {
         & > .container-fluid, & > .container {
             margin-top: 0px;
         }
+    }
+
+    .hero-unit {
+        padding: 30px;
+        
+        h1 {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.2;
+        }
+    }
+
+    .btn-large {
+        padding: 4px 10px;
+        font-size: 13px;
+        line-height: 18px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
     }
 }
