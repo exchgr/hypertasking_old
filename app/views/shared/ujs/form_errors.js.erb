@@ -1,7 +1,7 @@
 var errors = {ids: [], full_messages: []};
 
-<% ids.each do |error| %>
-  errors.ids.push("#<%= error %>");
+<% ids.each do |id| %>
+  errors.ids.push("#<%= id %>");
 <% end %>
 
 <% full_messages.each do |message| %>
