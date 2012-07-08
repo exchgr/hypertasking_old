@@ -1,1 +1,15 @@
 - provide :title, 'Sign in'
+.row
+  .span4.offset4
+    %h1 Sign in
+    = form_for :session, url: sessions_path, remote: true, html: {novalidate: 'novalidate'} do |f|
+      .control-group#email
+        = f.email_field :email, placeholder: 'Email'
+        %br/
+        .help-inline
+      .control-group#password
+        = f.password_field :password, placeholder: 'Password'
+        %br/
+        .help-inline
+      %p
+        %span.pull-right= f.submit 'Sign in', class: 'btn btn-primary btn-large'
