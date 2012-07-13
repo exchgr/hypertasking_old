@@ -1,0 +1,27 @@
+- provide :title, 'Edit your profile'
+.row
+  .span4.offset4
+    %h1 Edit your profile
+    = form_for @user, remote: true, html: {novalidate: 'novalidate'} do |f|
+      .control-group#first_name
+        = f.text_field :first_name, placeholder: 'First name'
+        %br/
+        .help-inline
+      .control-group#last_name
+        = f.text_field :last_name, placeholder: 'Last name'
+        %br/
+        .help-inline
+      .control-group#email
+        = f.email_field :email, placeholder: 'Email'
+        %br/
+        .help-inline
+      .control-group#password
+        = f.password_field :password, placeholder: 'Password'
+        %br/
+        .help-inline
+      .control-group#password_confirmation
+        = f.password_field :password_confirmation, placeholder: 'Type it again.'
+        %br/
+        .help-inline
+      = link_to 'Cancel', 'javascript:history.back();', class: 'btn btn-large'
+      %span.pull-right= f.submit 'Save', class: 'btn btn-primary btn-large'
