@@ -11,6 +11,5 @@
         = f.password_field :password, placeholder: 'Password'
         %br/
         .help-inline
-      %p
-        = link_to 'Sign up instead', signup_path, class: 'btn btn-large'
-        %span.pull-right= f.submit 'Sign in', class: 'btn btn-primary btn-large'
+      = link_to 'Sign up instead', signup_path, class: 'btn btn-large'
+      %span.pull-right= f.submit 'Sign in', class: 'btn btn-primary btn-large'
