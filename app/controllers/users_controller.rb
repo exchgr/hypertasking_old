@@ -35,4 +35,25 @@ class UsersController < ApplicationController
   def edit
     @user = User.find params[:id]
   end
+
+  def update
+    @user = User.find params[:id]
+
+    respond_to do |format|
+      if @user.update_attributes params[:user]
+        flash[:success] = 'You successfully updated your profile.'
+        format.js {
+          render js: "window.location.replace('#{user_path(@user)}')"
+        }
+      else
+        format.js {
+          render template: 'shared/ujs/form_errors.js.erb',
+          locals: {
+            ids: @user.errors,
+            full_messages: @user.errors.full_messages
+          }
+        }
+      end
+    end
+  end
 end
