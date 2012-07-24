@@ -10,7 +10,9 @@ class UsersController < ApplicationController
       if @user.save
         sign_in @user
         flash[:success] = 'Welcome to Hypertasking!'
-        format.js
+        format.js {
+          render js: "window.location.replace('#{user_path(@user)}')"
+        }
       else
         format.js {
           render template: 'shared/ujs/form_errors.js.erb',

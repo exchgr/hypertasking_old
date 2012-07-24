@@ -13,7 +13,9 @@ class SessionsController < ApplicationController
         if user.authenticate params[:session][:password]
           sign_in user
           flash[:success] = 'Welcome back, ' + user.first_name + '.'
-          format.js
+          format.js {
+            render js: "window.location.replace('#{user_path(@user)}')"
+          }
         else
           format.js {
             render template: 'shared/ujs/form_errors.js.erb',
