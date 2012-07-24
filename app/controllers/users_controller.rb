@@ -43,6 +43,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.update_attributes params[:user]
+        sign_in @user
         flash[:success] = 'You successfully updated your profile.'
         format.js {
           render js: "window.location.replace('#{user_path(@user)}')"
