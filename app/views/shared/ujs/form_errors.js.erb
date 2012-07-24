@@ -9,20 +9,31 @@ var errors = {ids: [], full_messages: []};
 <% end %>
 
 $.each(errors.ids, function(i, value) {
+  // Only display one error per form element. Rails usually returns the most pertinent one first.
   if (errors.ids[i] == errors.ids[i-1]) {
     return true;
   }
 
-  $('.control-group' + errors.ids[i])
-  .addClass('error')
-  .find('.help-inline')
-  .fadeOut(function() {
-    $(this).html(errors.full_messages[i])
-    .fadeIn();
-  });
+  // Animate with a fade if changing the error message
+  if ($('.control-group' + errors.ids[i]).hasClass('error')) {
+    if ($('.control-group' + errors.ids[i] + ' .help-inline').html() != errors.full_messages[i]) {
+      $('.control-group' + errors.ids[i] + ' .help-inline')
+      .fadeOut(function() {
+        $(this).html(errors.full_messages[i])
+        .fadeIn();
+      });
+    }
+  } else { // Slide down a new error message
+    $('.control-group' + errors.ids[i])
+    .addClass('error')
+    .find('.help-inline')
+    .html(errors.full_messages[i])
+    .slideDown();
+  }
 });
 
+// Slide up fixed errors
 $('.control-group:not(' + errors.ids.join() + ')')
 .removeClass('error')
 .find('.help-inline')
-.fadeOut();
+.slideUp();
