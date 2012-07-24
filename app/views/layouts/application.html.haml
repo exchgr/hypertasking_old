@@ -11,23 +11,7 @@
     %meta{name: 'viewport', content: 'user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0'}/
     = csrf_meta_tags
   %body
-    %header.navbar.navbar-fixed-top
-      .navbar-inner
-        .container
-          %h1= link_to 'Hypertasking', root_path, class: 'logo', alt: 'Home'
-          %ul.nav.pull-right
-            - if signed_in?
-              %li.dropdown
-                %a.dropdown-toggle{href: '#', 'data-toggle' => 'dropdown'}
-                  = current_user.first_name + ' ' + current_user.last_name
-                  %b.caret
-                %ul.dropdown-menu
-                  %li= link_to 'Your tasks', current_user
-                  %li= link_to 'Settings', '#'
-                  %li.divider
-                  %li= link_to 'Sign out', signout_path, method: 'delete'
-            - else
-              %li= link_to 'Sign in', signin_path
+    = render 'layouts/header'
     .container
       - flash.each do |key, value|
         %aside.alert{class: "alert-#{key}"}= value
