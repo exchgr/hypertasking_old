@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
           sign_in user
           flash[:success] = 'Welcome back, ' + user.first_name + '.'
           format.js {
-            render js: "window.location.replace('#{user_path(user)}')"
+            render js: "window.location.replace('#{redirect_back_or user_path(user)}')"
           }
         else
           format.js {

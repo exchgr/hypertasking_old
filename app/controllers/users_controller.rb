@@ -64,6 +64,7 @@ class UsersController < ApplicationController
 
   def signed_in_user
     unless signed_in?
+      store_location
       flash[:notice] = 'You need to be signed in to do that.'
       redirect_to signin_path
     end
