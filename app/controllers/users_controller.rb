@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  before_filter :signed_in_user, only: [:edit, :update]
+  before_filter :correct_user, only: [:edit, :update]
+
   def show
     @user = User.find params[:id]
   end
@@ -35,12 +38,9 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find params[:id]
   end
 
   def update
-    @user = User.find params[:id]
-
     respond_to do |format|
       if @user.update_attributes params[:user]
         sign_in @user
@@ -57,6 +57,23 @@ class UsersController < ApplicationController
           }
         }
       end
+    end
+  end
+
+  private
+
+  def signed_in_user
+    unless signed_in?
+      flash[:error] = 'You need to be signed in to do that.'
+      redirect_to signin_path
+    end
+  end
+
+  def correct_user
+    @user = User.find params[:id]
+    unless current_user? @user
+      flash[:error] = 'Authorized personnel only.'
+      redirect_to root_path
     end
   end
 end
