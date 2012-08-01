@@ -3,7 +3,8 @@
   .span4.offset4
     %h1 Edit your profile
     %span.pull-right
-      = link_to 'Delete your account', @user, method: :delete, confirm: "So this is the end? You're gonna delete your account?"
+      = link_to @user, method: :delete, confirm: "So this is the end? You're gonna delete your account?", alt: 'Delete your account', title: 'Delete your account', class: 'btn btn-danger btn-large' do
+        %i.icon-trash
     = form_for @user, remote: true, html: {novalidate: 'novalidate'} do |f|
       .control-group#first_name
         = f.text_field :first_name, placeholder: 'First name'
