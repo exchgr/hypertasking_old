@@ -77,10 +77,15 @@ class UsersController < ApplicationController
   end
 
   def correct_user
-    @user = User.find params[:id]
-    unless current_user? @user
-      flash[:error] = 'Authorized personnel only.'
-      redirect_to root_path
+    begin
+      @user = User.find params[:id]
+    rescue ActiveRecord::RecordNotFound
+      @user = 0
+    ensure
+      unless current_user? @user
+        flash[:error] = 'Authorized personnel only.'
+        redirect_to root_path
+      end
     end
   end
 end
