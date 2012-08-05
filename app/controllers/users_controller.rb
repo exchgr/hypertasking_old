@@ -5,8 +5,7 @@ class UsersController < ApplicationController
   before_filter :correct_user, only: [:show, :edit, :update, :destroy]
 
   def show
-    strategy = JSON.parse(open('http://oblique.heroku.com/api/random').read)
-    flash[:oblique] = strategy['strategy']
+    flash[:oblique] = JSON.parse(open('http://oblique.heroku.com/api/random').read)['strategy']
 
     respond_to do |format|
       format.html
