@@ -1,4 +1,16 @@
 - provide :title, 'Edit your profile'
+.modal.fade.hide#delete-account-confirm
+  .modal-header
+    %button.close{'data-dismiss' => 'modal'} &times;
+    %h3 For reals?
+  .modal-body
+    %p Are you sure you wanna delete your account? You can't go back on it. A deal's a deal.
+  .modal-footer
+    %a.btn{href: '#', 'data-dismiss' => 'modal'}
+      Not really
+    = link_to @user, method: :delete, class: 'btn btn-danger' do
+      %i.icon-trash.icon-white
+      Delete
 .row
   .span4.offset4
     .page-header
@@ -26,7 +38,7 @@
         %br/
         .help-inline
       %p
-        = link_to @user, method: :delete, confirm: "So this is the end? You're gonna delete your account?", alt: 'Delete your account', class: 'btn btn-danger', id: 'delete-account' do
+        %a.btn.btn-danger#delete-account{href: '#'}
           %i.icon-trash.icon-white
         %span.pull-right
           = link_to 'Cancel', 'javascript:history.back();'

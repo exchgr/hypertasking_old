@@ -5,4 +5,5 @@
 $ ->
   $('#delete-account').tooltip(
     title: 'Delete your account'
-  )
+  ).click ->
+    $('#delete-account-confirm').modal()
