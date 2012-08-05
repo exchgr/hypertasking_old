@@ -16,12 +16,13 @@
     .container
       .row
         - flash.each do |key, value|
-          .span3
+          .span4
             %aside.alert.fade.in{class: "alert-#{key}"}
               %button.close{'data-dismiss' => 'alert'} &times;
               - if key == :oblique
-                %h4 
-                  = link_to 'Oblique Strategy', 'http://oblique.heroku.com/'
+                %strong
+                  = succeed ':' do
+                    = link_to 'Oblique Strategy', 'http://oblique.heroku.com/'
               = value
       = yield
       = render 'layouts/footer'
