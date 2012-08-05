@@ -12,7 +12,7 @@ When I set out to make this app, I wanted to make something that would easily al
 
 ## The vision of Hypertasking
 
-+ Style, ease, quality, [velocity, design, comfort](http://en.wikipedia.org/wiki/Velocity\_:\_Desig\_:\_Comfort)
++ Style, ease, quality, [velocity, design, comfort](http://en.wikipedia.org/wiki/Velocity\_:\_Design\_:\_Comfort)
 + A well-organized interface for planning, gearing up, and zipping through tasks
 + Customizable without being fiddly and wasting all your time
 + Automatic reminders based on location and time so you can clear your head and focus
