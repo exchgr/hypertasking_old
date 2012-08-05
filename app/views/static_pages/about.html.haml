@@ -3,41 +3,34 @@
   %h1
     More about
     %span.logo Hypertasking
-  %p Hypertasking aims to be the best to-do list app out there. Not the simplest, not the quickest, and not the most fully-featured hunk of junk. Just the best. It'll begin life as a simple Rails app, and eventually (when I learn ObjC), it'll become a Mac app and an iOS app, providing offline and syncing capabilities to make it super useful no matter where you are. So if you want a to-do list app that provides a truly productive experience, stick around for further updates.
-  %h2 What is hypertasking?
-  %p Good question. Hypertasking, to me, is a state of mind and body that is super-productive. When I set out to make this app, I wanted to make something that would easily allow people to get into that high-throughput mode without worrying too much about the limitations or capabilities of the system they're using.
+  %p Hypertasking aims to be the best to-do list app out there. Not the simplest, not the quickest, and not the most fully-featured hunk of junk. Just the best. So if you want a to-do list app that provides a truly productive experience, stick around for further updates.
+  %h2 What is hypertasking all about?
+  %p Good question. Hypertasking, the concept, is a state of mind and body that's super-productive. It's about finding and exploiting that hidden zone between rushing and slogging, that perfect balance between too much and not enough. Hypertasking is a marvellous, pumping flow that almost seems to carry you along through a list of concrete and manageable tasks. When you're hypertasking, you're unstoppable.
+  %p When I set out to make this app, I wanted to make something that would easily allow people to get into this high-throughput mode without worrying too much about the limitations or capabilities of the the task management system they're using. I wanted to help people recreate the conditions that allow them to complete lots and lots of tasks in rapid succession, not just become a place to dump a large, disorderly list of things to do. In order to do this, I've set out some goals for this project.
   %h2
-    Have you read
-    = succeed '?' do
-      %i Getting Things Done
-  %p
-    Nope. But I plan to.
-  %h2 Planned Features
+    The vision of 
+    %span.logo Hypertasking
   %ul
-    %li
-      %p Multiple lists
-    %li
-      %p Indentation and collapsibility
-    %li
-      %p Custom reordering, or sorting by other criteria
-    %li
-      %p Due dates
-    %li
-      %p Location- and time-based reminders
-    %li
-      %p Priorities
-    %li
-      %p Unique special sauce
-    %li
-      %p Offline and sync
     %li
       %p
         Style, ease, quality, 
         = link_to 'velocity, design, comfort', 'http://en.wikipedia.org/wiki/Velocity_:_Design_:_Comfort'
-  %h2 What else?
+    %li
+      %p A well-organized interface for planning, gearing up, and zipping through tasks
+    %li
+      %p Customizable without being fiddly and wasting all your time
+    %li
+      %p Automatic reminders based on location and time so you can clear your head and focus
+    %li
+      %p Prioritization, so you know what's important
+    %li
+      %p Unique special sauce
+  %h2 What next?
   %p
-    = succeed '.' do
-      I'm just starting to build Hypertasking, so you can't sign up quite yet. But for now, you can
-      = link_to 'Follow on Twitter', 'http://twitter.com/hypertaskingapp', class: 'btn'
-      or
-      = link_to 'Fork on Github', 'https://github.com/exchgr/Hypertasking', class: 'btn'
+    = link_to 'Sign up', signup_path
+    and start using it. It's constantly being improved, and you'll see the changes as they come. Follow
+    = precede '@' do
+      = link_to 'hypertaskingapp', 'http://twitter.com/hypertaskingapp'
+    on Twitter to stay updated, or
+    = link_to 'fork it on Github', 'https://github.com/exchgr/Hypertasking'
+    if you think I'm not moving fast enough.
