@@ -1,11 +1,9 @@
 - provide :title, 'Edit your profile'
 .row
   .span4.offset4
-    %h1 Edit your profile
-    %span.pull-right
-      = link_to @user, method: :delete, confirm: "So this is the end? You're gonna delete your account?", alt: 'Delete your account', title: 'Delete your account', class: 'btn btn-danger' do
-        %i.icon-trash.icon-white
+    %h1 Settings
     = form_for @user, remote: true, html: {novalidate: 'novalidate'} do |f|
+      %h2 Edit your profile
       .control-group#first_name
         = f.text_field :first_name, placeholder: 'First name'
         %br/
@@ -26,5 +24,12 @@
         = f.password_field :password_confirmation, placeholder: 'Type it again.'
         %br/
         .help-inline
-      = link_to 'Cancel', 'javascript:history.back();', class: 'btn btn-large'
-      %span.pull-right= f.submit 'Save', class: 'btn btn-primary btn-large'
+      %p
+        = link_to @user, method: :delete, confirm: "So this is the end? You're gonna delete your account?", alt: 'Delete your account', title: 'Delete your account', class: 'btn btn-danger' do
+          %i.icon-trash.icon-white
+        %span.pull-right
+          = link_to 'Cancel', 'javascript:history.back();'
+          or
+          = f.submit 'Save', class: 'btn btn-primary'
+    %h2 Manage your data
+    %p= link_to 'Download it as a JSON file', action: 'show', format: :json

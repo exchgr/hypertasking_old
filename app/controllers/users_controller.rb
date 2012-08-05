@@ -1,9 +1,12 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user, only: [:edit, :update, :destroy]
-  before_filter :correct_user, only: [:edit, :update, :destroy]
+  before_filter :signed_in_user, only: [:show, :edit, :update, :destroy]
+  before_filter :correct_user, only: [:show, :edit, :update, :destroy]
 
   def show
-    @user = User.find params[:id]
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def create

@@ -23,5 +23,6 @@
         = f.password_field :password_confirmation, placeholder: 'Type it again.'
         %br/
         .help-inline
-      = link_to 'Sign in instead', signin_path, class: 'btn btn-large'
-      %span.pull-right= f.submit 'Sign up', class: 'btn btn-primary btn-large'
+      %p
+        = link_to 'Sign in instead', signin_path, class: 'btn'
+        %span.pull-right= f.submit 'Sign up', class: 'btn btn-primary'

@@ -13,13 +13,9 @@
     box-sizing: border-box;
 }
 
-.span4.offset4 h1 {
-    display: inline-block;
-}
-
 form {
     position: relative;
-    margin: 15px 0px 0px 0px;
+    margin: 0px;
 
     .control-group {
         &#first_name, &#last_name {
