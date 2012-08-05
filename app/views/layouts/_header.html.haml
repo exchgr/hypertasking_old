@@ -6,12 +6,22 @@
         - if signed_in?
           %li.dropdown
             %a.dropdown-toggle{href: '#', 'data-toggle' => 'dropdown'}
+              %i.icon-white.icon-user
               = current_user.first_name + ' ' + current_user.last_name
               %b.caret
             %ul.dropdown-menu
-              %li= link_to 'Your tasks', current_user
-              %li= link_to 'Settings', edit_user_path(current_user)
+              %li
+                = link_to current_user do
+                  %i.icon-th-list
+                  Your tasks
+              %li
+                = link_to edit_user_path(current_user) do
+                  %i.icon-cog
+                  Settings
               %li.divider
-              %li= link_to 'Sign out', signout_path, method: 'delete'
+              %li
+                = link_to signout_path, method: 'delete' do
+                  %i.icon-eject
+                  Sign out
         - else
           %li= link_to 'Sign in', signin_path
