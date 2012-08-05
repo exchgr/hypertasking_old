@@ -4,6 +4,8 @@
 //
 // THIS STYLESHEET IS ALSO USED BY SESSIONS
 
+@import 'bootstrap/variables';
+
 /* Mixins */
 
 @mixin box-sizing { // Move me to my own mixins file!
@@ -19,6 +21,7 @@ form {
 
     .control-group {
         &#first_name, &#last_name {
+            margin-top: 0px;
             display: inline-block;
             width: 49%;
         }
@@ -38,4 +41,20 @@ form {
             display: none;
         }
     }
+}
+
+ul.nav.nav-list {
+    height: 100%;
+    border: {
+        radius: 8px;
+        width: 1px;
+        style: solid;
+        color: $grayLighter;
+    }
+    padding: 8px 15px;
+    //background: darken($grayLighter, 5%);
+
+    li:not(.active) > a:hover {
+        //background: $white;
+    } 
 }

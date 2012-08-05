@@ -7,3 +7,7 @@ $ ->
     title: 'Delete your account'
   ).click ->
     $('#delete-account-confirm').modal()
+
+  $('ul.nav-list a').click ->
+    $(this).parent().parent().find('li.active').removeClass('active').find('.icon-white').removeClass 'icon-white'
+    $(this).parent().addClass('active').find('i').addClass 'icon-white'

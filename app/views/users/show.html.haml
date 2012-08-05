@@ -1,3 +1,33 @@
 - provide :title, @user.first_name + ' ' + @user.last_name + '\'s tasks'
-%h1= @user.first_name + ' ' + @user.last_name + '’s tasks'
+.page-header
+  %h1= @user.first_name + ' ' + @user.last_name + '’s tasks'
 // Add 'Your' logic
+
+.row
+  .span3
+    %ul.nav.nav-list
+      %li.active
+        = link_to '#' do
+          %i.icon-white.icon-asterisk
+          Everything
+      %li
+        = link_to '#' do
+          %i.icon-play
+          Right now
+      %li
+        = link_to '#' do
+          %i.icon-calendar
+          Upcoming
+      %li.divider
+      %li
+        = link_to '#' do
+          %i.icon-exclamation-sign
+          Important
+      %li
+        = link_to '#' do
+          %i.icon-time
+          Long tasks
+      %li
+        = link_to '#' do
+          %i.icon-road
+          Quick tasks
