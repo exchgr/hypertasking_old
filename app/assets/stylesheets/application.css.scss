@@ -39,6 +39,14 @@ header {
     }
 }
 
+h1 {
+    clear: both;
+}
+
+.alert-oblique {
+    @extend .alert-info;
+}
+
 .page-header {
     margin-top: 0px;
 }

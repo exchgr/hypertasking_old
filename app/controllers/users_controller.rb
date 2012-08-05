@@ -1,8 +1,13 @@
+require 'open-uri'
+
 class UsersController < ApplicationController
   before_filter :signed_in_user, only: [:show, :edit, :update, :destroy]
   before_filter :correct_user, only: [:show, :edit, :update, :destroy]
 
   def show
+    strategy = JSON.parse(open('http://oblique.heroku.com/api/random').read)
+    flash[:oblique] = strategy['strategy']
+
     respond_to do |format|
       format.html
       format.json
