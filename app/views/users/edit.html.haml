@@ -1,7 +1,8 @@
 - provide :title, 'Edit your profile'
 .row
   .span4.offset4
-    %h1 Settings
+    .page-header
+      %h1 Settings
     = form_for @user, remote: true, html: {novalidate: 'novalidate'} do |f|
       %h2 Edit your profile
       .control-group#first_name
@@ -25,7 +26,7 @@
         %br/
         .help-inline
       %p
-        = link_to @user, method: :delete, confirm: "So this is the end? You're gonna delete your account?", alt: 'Delete your account', title: 'Delete your account', class: 'btn btn-danger' do
+        = link_to @user, method: :delete, confirm: "So this is the end? You're gonna delete your account?", alt: 'Delete your account', class: 'btn btn-danger', id: 'delete-account' do
           %i.icon-trash.icon-white
         %span.pull-right
           = link_to 'Cancel', 'javascript:history.back();'

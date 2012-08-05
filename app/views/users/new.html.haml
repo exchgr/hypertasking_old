@@ -1,7 +1,8 @@
 - provide :title, 'Sign up'
 .row
   .span4.offset4
-    %h1 Sign up
+    .page-header
+      %h1 Sign up
     = form_for @user, remote: true, html: {novalidate: 'novalidate'} do |f|
       .control-group#first_name
         = f.text_field :first_name, placeholder: 'First name'
