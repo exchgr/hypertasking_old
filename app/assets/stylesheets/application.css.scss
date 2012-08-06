@@ -92,6 +92,8 @@ footer {
     }
 }
 
+/* Responsive */
+
 @media (max-width: 979px) { // below landscape tablet
     body {
         & > .container-fluid, & > .container {
@@ -100,7 +102,7 @@ footer {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) { // Portrait tablet and above
     .alerts {
         position: absolute;
         right: 0px;
