@@ -45,16 +45,11 @@ form {
 
 ul.nav.nav-list {
     height: 100%;
-    border: {
-        radius: 8px;
-        width: 1px;
-        style: solid;
-        color: $grayLighter;
-    }
+    border-radius: 8px;
     padding: 8px 15px;
-    //background: darken($grayLighter, 5%);
+    background: $grayLighter;
 
     li:not(.active) > a:hover {
-        //background: $white;
+        background: darken($grayLighter, 5%);
     } 
 }
