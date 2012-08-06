@@ -8,6 +8,7 @@ $ ->
   ).click ->
     $('#delete-account-confirm').modal()
 
-  $('ul.nav-list a').click ->
-    $(this).parent().parent().find('li.active').removeClass('active').find('.icon-white').removeClass 'icon-white'
-    $(this).parent().addClass('active').find('i').addClass 'icon-white'
+  $('a[data-toggle="tab"]').on('shown', (e) ->
+    $(e.relatedTarget).removeClass('active').find('.icon-white').removeClass 'icon-white'
+    $(e.target).parent().addClass('active').find('i').addClass 'icon-white'
+  )

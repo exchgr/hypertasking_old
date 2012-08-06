@@ -21,6 +21,7 @@ $black: #333;
 
 body {
     & > .container-fluid, & > .container {
+        position: relative;
         margin-top: 60px;
     }
 }
@@ -39,10 +40,6 @@ header {
     }
 }
 
-h1 {
-    clear: both;
-}
-
 .alert-oblique {
     @extend .alert-info;
 }
@@ -54,6 +51,10 @@ h1 {
 h2 {
     margin-top: 20px;
     line-height: 1.2;
+
+    [class^="icon-"], [class*=" icon-"] {
+        vertical-align: middle;
+    }
 }
 
 p, .control-group {
@@ -95,6 +96,18 @@ footer {
     body {
         & > .container-fluid, & > .container {
             margin-top: 0px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .alerts {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+
+        & .span4 {
+            float: right;
         }
     }
 }

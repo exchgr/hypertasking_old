@@ -14,7 +14,7 @@
   %body
     = render 'layouts/header'
     .container
-      .row
+      .row.alerts
         - flash.each do |key, value|
           .span4
             %aside.alert.fade.in{class: "alert-#{key}"}

@@ -7,27 +7,59 @@
   .span3
     %ul.nav.nav-list
       %li.active
-        = link_to '#' do
+        = link_to '#everything', 'data-toggle' => 'tab' do
           %i.icon-white.icon-asterisk
           Everything
       %li
-        = link_to '#' do
+        = link_to '#right-now', 'data-toggle' => 'tab' do
           %i.icon-play
           Right now
       %li
-        = link_to '#' do
+        = link_to '#upcoming', 'data-toggle' => 'tab' do
           %i.icon-calendar
           Upcoming
       %li.divider
       %li
-        = link_to '#' do
+        = link_to '#important', 'data-toggle' => 'tab' do
           %i.icon-exclamation-sign
           Important
       %li
-        = link_to '#' do
+        = link_to '#long', 'data-toggle' => 'tab' do
           %i.icon-time
           Long tasks
       %li
-        = link_to '#' do
-          %i.icon-road
+        = link_to '#quick', 'data-toggle' => 'tab' do
+          %i.icon-fast-forward
           Quick tasks
+  .span9
+    .tab-content
+      .tab-pane.active#everything
+        %h2
+          %i.icon-asterisk
+          Everything
+        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet enim vitae leo scelerisque porta at at nibh. Duis eleifend nisi sed est vulputate dictum. Fusce interdum dui non libero venenatis in condimentum nisi fringilla. Etiam et egestas nunc. Sed sodales est eget nunc ultrices congue interdum justo consectetur. Fusce massa nibh, feugiat sit amet convallis nec, euismod in nisl. Nulla facilisi. Integer feugiat, mauris sed dapibus convallis, massa justo congue velit, non pellentesque lorem mi ac nulla. Ut nisl lorem, malesuada et varius nec, vestibulum ac felis. Aenean feugiat rhoncus purus ut tincidunt.
+      .tab-pane#right-now
+        %h2
+          %i.icon-play
+          Right now
+        %p Donec ornare nulla libero. Phasellus semper dictum enim. Nullam ultrices urna dignissim justo consectetur hendrerit. Ut mollis lacus nec risus cursus pretium. Phasellus dolor orci, pharetra ut mollis id, varius ut nisl. Suspendisse dapibus augue vel diam bibendum ut auctor turpis tempus. Duis elementum nibh lorem. Sed ullamcorper diam sit amet nisi posuere at volutpat eros mattis. Nulla at lacus elit, nec tincidunt elit. Nunc odio neque, interdum nec placerat non, pharetra eget nibh. Pellentesque semper faucibus vestibulum. Nullam vel sem elementum risus feugiat suscipit vitae non risus. Mauris porta pellentesque est at lacinia.
+      .tab-pane#upcoming
+        %h2
+          %i.icon-calendar
+          Upcoming
+        %p Nulla pharetra lacus eget dolor vehicula aliquam ut eu est. Duis vitae viverra sem. Vestibulum convallis pretium volutpat. Etiam aliquam, magna et placerat euismod, tellus neque porta lorem, eget blandit turpis orci at turpis. Nam sollicitudin, justo id semper facilisis, mauris ligula adipiscing nulla, in mollis augue mi ut nisl. In hac habitasse platea dictumst. Aliquam viverra, nunc eu gravida faucibus, velit odio condimentum massa, non ornare massa odio nec leo. Ut enim sem, fermentum ut lacinia eget, auctor sit amet nulla. Proin interdum dui ac leo consequat fringilla. Donec gravida ornare urna, nec blandit purus consectetur eu. Quisque suscipit est sit amet mauris placerat eget posuere erat venenatis. Pellentesque tincidunt dapibus massa ac tincidunt.
+      .tab-pane#important
+        %h2
+          %i.icon-exclamation-sign
+          Important
+        %p Praesent augue magna, mattis vel rutrum egestas, dignissim vel tortor. Sed adipiscing risus in ipsum rhoncus non fermentum nulla sollicitudin. In blandit mauris eget purus congue ut elementum metus vehicula. Curabitur vehicula neque id risus porta dapibus. Duis vehicula laoreet enim. Curabitur et nunc in erat posuere tempor ac sed felis. Suspendisse sodales risus eget metus blandit nec rhoncus felis bibendum. Phasellus velit tellus, egestas sit amet tincidunt a, fringilla eu est. Suspendisse sem nibh, mattis et ultricies eget, sodales sit amet enim. Pellentesque hendrerit egestas eleifend. Nullam vel felis nisi. Ut et rhoncus eros. Proin tempus luctus risus.
+      .tab-pane#long
+        %h2
+          %i.icon-time
+          Long tasks
+        %p Mauris commodo erat ut arcu cursus blandit. Nullam non nibh vel nulla sollicitudin consectetur in non enim. Nullam justo ipsum, porttitor eget bibendum sed, scelerisque id nibh. Nunc accumsan, quam sit amet tristique egestas, erat velit pellentesque diam, ac condimentum elit diam quis massa. Mauris rutrum risus non nisi semper sit amet porta neque congue. Vivamus gravida felis nec nulla suscipit egestas. Etiam dictum massa sed purus molestie blandit. Aenean at nisi eu eros fermentum placerat at vitae nisi. Nullam sagittis aliquet nisi, eget posuere nibh rutrum condimentum. Nullam eget ante vel ligula porta faucibus. Donec id urna leo, eu iaculis augue.
+      .tab-pane#quick
+        %h2
+          %i.icon-fast-forward
+          Quick tasks
+        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet enim vitae leo scelerisque porta at at nibh. Duis eleifend nisi sed est vulputate dictum. Fusce interdum dui non libero venenatis in condimentum nisi fringilla. Etiam et egestas nunc. Sed sodales est eget nunc ultrices congue interdum justo consectetur. Fusce massa nibh, feugiat sit amet convallis nec, euismod in nisl. Nulla facilisi. Integer feugiat, mauris sed dapibus convallis, massa justo congue velit, non pellentesque lorem mi ac nulla. Ut nisl lorem, malesuada et varius nec, vestibulum ac felis. Aenean feugiat rhoncus purus ut tincidunt.
