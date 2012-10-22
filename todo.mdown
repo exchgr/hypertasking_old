@@ -1,0 +1,74 @@
+
+Home
+About
+.co
+HEY. NO. DESIGN MORE.
+THINK ABOUT THE DATABASE SCHEMA
+BOOTSTRAP 2.1
+Users
+Header
+Icons
+Oblique Strategies in the welcome message
+‎http://oblique.heroku.com/‎
+Ability to close the flash hash message
+Sign in/up / Edit
+First and last inline
+Modal terms of service & privacy policy
+remember me
+change sign-in button to link
+Account settings
+Change any attribute
+Delete account
+Export JSON data
+Devise (emails and auth and stuff. what else?) Is this needed?
+Mobile-friendly front page and headers
+Rewrite the About page. Again.
+Add to Home Screen compatibility
+Help page
+More custom stylings. Colors, mostly
+Better database config
+Lists
+Get the tabs working
+Reorder tabs in a way that makes sense for flows. Label groups.
+http://srobbin.github.com/jquery-pageslide/ - This or Coffin by @fat
+Things to try:
+Tags/lists/categories
+Tasks (new branch!!!!)
+Local and remote (for offline goodness)
+reorder/draggable
+Drag into nav items to add them to that, in addition to buttons on tasks
+Indentation
+collapsible
+notes
+Simple rich text
+Maybe inline photos
+Location/time reminders
+Make a "nearby" entry in the nav: a map with pins
+Twilio for SMS
+Priorities
+Important (test it out!)
+"stories" (test granularity)
+Read up more on what other people are doing with this. Ask Sean. (This is the "long/quick tasks" in the nav)
+logs and graphs?
+Today area, which is stuff you're gonna do today
+Optionally automatically clear Today every night
+keybindings
+easy
+collaboration
+public and private lists - either way, explicit write permissions
+assign tasks to collaborators
+push changes in real time
+Put the controls for sharing inside the list's header or directly under it.
+Undo/redo
+Calendar sync for reminders
+comfort ease style design velocity
+responsive (both snappy and transforming)
+offline
+‎http://localtodos.com/‎
+icon: coffee cup with an asterisk, next to bullet points
+About
+Terms of use and privacy policy
+Credit where credit is due
+Twitter Bootstrap
+oblique.heroku.com
+
